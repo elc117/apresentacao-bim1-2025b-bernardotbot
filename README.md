@@ -77,11 +77,12 @@ main :: IO Counts
 main = runTestTT tests
 ```
 
-No trecho acima, foi criada uma função `testAdd` para informar quais são é o valor e saída dado dois valores de entrada. Isso é informado depois das aspas. O número 3 indica o valor esperado de saída quando a função `add` for chamada com os argumentos 1 e 2.
-Para que o teste ficasse mais preciso, outros testes precisam ser feitos. Isso pode ser feito adicionando outras linhas que seguem o mesmo padrão. Por exemplo:
+No trecho acima, foi criada uma função `testAdd` para informar qual é o valor de saída dado dois valores de entrada. Isso é informado depois de `assertEqual "for (add 1 2)"`. O número 3 indica o valor esperado de saída quando a função `add` for chamada com os argumentos 1 e 2.
+Vale lembrar que outras verificações podem ser feitas para tornar o teste mais preciso. Isso pode ser feito adicionando outras linhas que seguem o mesmo padrão. Por exemplo:
+
 `testAdd = TestCase (assertEqual "for (add 5 5)," 10 (add 5 5))`
 
-Na linha `tests = TestList [TestLabel "testAdd" testAdd` é´criada uma lista de testes. Quando o código for rodado, todas as funções dentro dessa lista serão testadas.
+Dando sequência ao código, na linha `tests = TestList [TestLabel "testAdd" testAdd` é criada uma lista de testes. Quando o código for rodado, todas as funções dentro dessa lista serão testadas.
 
 Para rodar os testes, encontrei os seguintes comandos ("tests" representa o nome da lista de testes):
 - `cabal tests`
@@ -92,6 +93,7 @@ No entanto, para mim funcionou o comando mostrado no material das aulas (TestSum
 
 Os resultados são informados da seguinte maneira ( o `2` representa o número de funções testadas):
 `Cases: 2  Tried: 2  Errors: 0  Failures: 0`
+
 
 
 ## Referências
