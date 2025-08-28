@@ -85,13 +85,16 @@ Vale lembrar que outras verificações podem ser feitas para tornar o teste mais
 Dando sequência ao código, na linha `tests = TestList [TestLabel "testAdd" testAdd` é criada uma lista de testes. Quando o código for rodado, todas as funções dentro dessa lista serão testadas.
 
 Para rodar os testes, encontrei os seguintes comandos ("tests" representa o nome da lista de testes):
+
 - `cabal tests`
 - `runTestTT tests`
 
 No entanto, para mim funcionou o comando mostrado no material das aulas (TestSum.hs é o nome do arquivo de testes):
+
 `runhaskell TestSum.hs`
 
 Os resultados são informados da seguinte maneira ( o `2` representa o número de funções testadas):
+
 `Cases: 2  Tried: 2  Errors: 0  Failures: 0`
 
 
